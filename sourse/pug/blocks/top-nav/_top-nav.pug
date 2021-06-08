@@ -1,0 +1,44 @@
+mixin mob-mnu()
+
+	+b.menu-mobile--js.d-lg-none
+		+b.toggle-menu-mobile--js.on
+			span
+		+e.inner
+
+			+mnu()
+			+e.contacts.d-md-none
+				+e.tel(href="tel:+7(978)8444151") 
+					+icon('tel')
+					span +7(978) 
+						strong 844 41-51
+				+b.messengers
+					+e.item(href="viber://chat?number=%2B79788444151" target='_blank')
+						+icon('viber')
+					+e.item(href="https://api.whatsapp.com/send?phone=79788444151&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D1%8F%20%D0%BF%D0%BE%20%D0%BF%D0%BE%D0%B2%D0%BE%D0%B4%D1%83%20%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2" target='_blank')
+						+icon('whatsapp')
+			.text-right
+		//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			.row.align-items-center
+				.col.col-md-auto 
+					+e.logo(href="/")
+						img.res-i(src="img/@2x/logo.png" alt="Логотип")
+				.col.d-none.d-lg-block
+					+mnu()
+				+e.col.col.col-lg-auto.d-none.d-md-flex 
+					+e.tel(href="tel:+7(978)8444151") 
+						+icon('tel')
+						span +7(978) 
+							strong 844 41-51
+					+b.messengers
+						+e.item(href="viber://chat?number=%2B79788444151" target='_blank')
+							+icon('viber')
+						+e.item(href="https://api.whatsapp.com/send?phone=79788444151&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D1%8F%20%D0%BF%D0%BE%20%D0%BF%D0%BE%D0%B2%D0%BE%D0%B4%D1%83%20%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2" target='_blank')
+							+icon('whatsapp')
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js
+						span
+	// end top-nav

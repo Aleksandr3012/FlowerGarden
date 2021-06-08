@@ -1,0 +1,77 @@
+// start .sCard
+.sCard {
+	--sPT: #{rem(20)};
+	// --sPB: ;
+	// --sTPB: ;
+
+	@include media-breakpoint-up(md) {
+		padding-bottom: calc(var(--sPB) / 1.7);
+	}
+
+	&__row {
+		@include roww(23px);
+	}
+
+	&__imgWrap {
+		height: 100%;
+		picture {
+			height: 100%;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__wrap {
+		border: 10px solid #eee0e7;
+		padding: rem(55) rem(71) rem(98);
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		@include media-breakpoint-up(lg) {
+			min-height: 457px;
+		}
+	}
+
+	&__name {
+		font-weight: bold;
+		margin-bottom: rem(15);
+	}
+	&__descr {
+		margin-bottom: rem(15);
+	}
+	&__price {
+		font-weight: bold;
+		span {
+			font-size: $h5-font-size;
+		}
+	}
+
+	.btn-info {
+		min-height: 50px;
+		@include media-breakpoint-up(lg) {
+			min-width: 188px;
+		}
+	}
+
+	.btn-outline-info {
+		@include media-breakpoint-up(lg) {
+			min-width: 218px;
+		}
+	}
+
+	.btnRow {
+		margin-top: auto;
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sCard

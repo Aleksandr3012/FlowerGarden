@@ -1,0 +1,71 @@
+// start .sDelivery
+.sDelivery {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+
+	padding-top: calc(var(--sPT) * 1.1);
+	&__item {
+		padding-bottom: rem(20);
+		strong {
+		}
+	}
+
+	p {
+		line-height: calc(20 / 16);
+		a {
+			display: inline-block;
+			color: $body-color;
+			font-weight: bold;
+			text-decoration: none;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+
+	&__row {
+		padding-bottom: rem(35);
+
+		@include media-breakpoint-up(xl) {
+			@include roww(79px);
+			padding-bottom: rem(35);
+		}
+		@include media-breakpoint-up(xxl) {
+			@include roww(179px);
+		}
+	}
+
+	&__itemRow {
+		padding-bottom: rem(10);
+		@include media-breakpoint-up(sm) {
+			padding-bottom: rem(23);
+		}
+		@include roww(20px);
+	}
+
+	&__iconWrap {
+		border: 2px solid $primary;
+		border-radius: 50%;
+		width: 55px;
+		height: 55px;
+		padding: rem(10);
+	}
+
+	.btn {
+		margin-bottom: rem(10);
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sDelivery
+
+.btnRow {
+	@include roww(18px);
+}

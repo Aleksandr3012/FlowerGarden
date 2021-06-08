@@ -1,0 +1,36 @@
+mixin sDelivery(data)
+	// start sDelivery
+	+b.sDelivery.section#sDelivery&attributes(attributes)
+		.container
+			+e.row.row.justify-content-center 
+				mixin item(item)
+					.col-sm-6.col-lg-4
+						+e.item
+							+e.itemRow.row.align-items-center 
+								.col-auto
+									+e.iconWrap 
+										+pic(`${item.icon}.png`,'','')
+								.col
+									strong= item.title 
+							p!= item.text
+				+item({
+					icon: 'basket',
+					title: 'Оформление заказа',
+					text: `Заказ можно оформить через сайт или позвонив нам по&nbsp;тел.: <a href="tel:+7(978)8444151"> +7(978) 844 41 51</a> (WhatsApp, Viber) <br>Заказы оформляются 24/7, без выходных`
+					})
+				+item({
+					icon: 'telephone',
+					title: 'Подтверждение заказа',
+					text: `Перезваниваем в&nbsp;течение 1&nbsp;часа после получения заявки с&nbsp;сайта и&nbsp;уточняем все детали.`
+					})
+				+item({
+					icon: 'delivery',
+					title: 'Доставка',
+					text: `Доставляем ваши заказы по г.&nbsp;Севастополю с&nbsp;9:00&nbsp;до&nbsp;20:00.`
+					})
+			+e.btnRow.row.justify-content-center 
+				.col-auto
+					a.btn.btn-outline-info(href="#") Перейти в каталог букетов
+				.col-auto
+					a.btn.btn-outline-info(href="#") Перейти в каталог растений
+	// end sDelivery

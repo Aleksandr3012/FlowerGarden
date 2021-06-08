@@ -1,0 +1,20 @@
+mixin sCatalog(data)
+	// start sCatalog
+	+b.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			block
+
+	// end sCatalog
+
+mixin catalogItem(img)
+	.col-6.col-lg-3
+		+b.catalogItem
+			+e.imgWrap(href="#")
+				+pic(img,'','')
+			+e.block.text-center 
+				+e.name Название
+				+e.descr Краткое описание
+				+e.price Цена: 
+					span 0 руб.
+				+e.btnWrap
+					+e.btn.btn.btn-info(href="#") Заказать

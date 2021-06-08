@@ -1,0 +1,43 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sReviews/_sReviews.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= 'main.png'
+
+block title
+	- let  title= 'Комнатные растения'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+	+top-nav()
+	+b.pageHead 
+		.container
+			+breadcrumb('Главная','Комнатные растения')
+	+sCatalog().pt-4
+		.row
+			+catalogItem('catalog-1.jpg')
+			+catalogItem('catalog-2.jpg')
+			+catalogItem('catalog-3.jpg')
+			+catalogItem('catalog-4.jpg')
+			+catalogItem('catalog-1.jpg')
+			+catalogItem('catalog-2.jpg')
+			+catalogItem('catalog-3.jpg')
+			+catalogItem('catalog-4.jpg')
+		.text-center
+			a.btn.btn-outline-info(href="#") Перейти в каталог букетов
+	+sContact().pt-0
+		+b.section-title.text-center
+			h2 Как нас найти
+	+footer()
+
+
+

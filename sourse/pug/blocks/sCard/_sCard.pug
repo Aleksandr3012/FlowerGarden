@@ -1,0 +1,19 @@
+mixin sCard(data)
+	// start sCard
+	+b.sCard.section#sCard&attributes(attributes)
+		.container
+			+e.row.row
+				+e.imgWrap.col-4 
+					+pic('cardImg.jpg','','')
+				.col 
+					+e.wrap
+						+e.name Название
+						+e.descr Краткое описание
+						+e.price Цена: 
+							span 0 руб.
+						.btnRow.row
+							.col-auto 
+								+e.btn.btn.btn-info(href="#") Заказать
+							.col-auto
+								.btn.btn-outline-info(href="#") Назад в каталог
+	// end sCard

@@ -1,0 +1,17 @@
+mixin sReviews(data)
+	// start sReviews
+	+b.SECTION.sReviews.section#sReviews&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Отзывы наших клиентов
+
+			.row
+				mixin item(img)
+					.col-sm-6.col-lg-4
+						+e.item 
+							+pic(`review-${img}.jpg`,'','')
+							.h3 &laquo;Цветы в&nbsp;подарок в&nbsp;наше время&nbsp;&mdash;&nbsp;это уже не&nbsp;роскошь, а&nbsp;норма для людей всех возрастов. Для составления букетов в&nbsp;нашей сети магазинов используются только&nbsp;свежие цветы.&raquo;
+				+item(1)
+				+item(2)
+				+item(3)
+	// end sReviews

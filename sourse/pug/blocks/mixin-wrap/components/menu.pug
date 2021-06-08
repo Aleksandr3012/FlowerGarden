@@ -1,0 +1,16 @@
+//- WP menu
+mixin mnu()
+	//- -
+	//- 	var nav= { 
+	//- 		"БУКЕТЫ":"#",
+	//- 		"КОМНАТНЫЕ РАСТЕНИЯ":"#",
+	//- 		"О КОМПАНИИ":"#" ,
+	//- 		"КАК ЗАКАЗАТЬ":"#",
+	//- 		}
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		li.menu-item.active(itemprop="item" ): a(href="#" itemprop="url") БУКЕТЫ
+		li.menu-item(itemprop="item" ): a(href="#" itemprop="url") КОМНАТНЫЕ РАСТЕНИЯ
+		li.menu-item(itemprop="item" ): a(href="#" itemprop="url") О КОМПАНИИ
+		li.menu-item(itemprop="item" ): a(href="#" itemprop="url") КАК ЗАКАЗАТЬ
+
+//- menu

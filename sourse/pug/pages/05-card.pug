@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCard/_sCard.pug
+include ../blocks/sDelivery/_sDelivery.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'Бегония'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+	+top-nav()
+	+b.pageHead 
+		.container
+			+breadcrumb('Главная','Комнатные растения','Бегония')
+	+sCard()
+	+sDelivery
+	+sContact().pt-0
+		+b.section-title.text-center
+			h2 Как нас найти
+	+footer()
+
+
+

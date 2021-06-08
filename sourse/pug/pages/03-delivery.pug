@@ -1,0 +1,38 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sDelivery/_sDelivery.pug
+
+block variables
+	- let  mainPage= 'mainPage' 
+	- let  bg= '03.png'
+
+block title
+	- let  title= 'Как заказать'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+	+top-nav()
+	+headerBlock()
+		+e.txt.center
+			+e.imgWrap
+				+pic('header-img.png','','')
+			+b.section-title
+				h1 Как заказать
+	+b.pageHead 
+		.container
+			+breadcrumb('Главная','Как заказать')
+	+sDelivery()
+	+sContact().pt-0
+		+b.section-title.text-center
+			h2 Как нас найти
+	+footer()
+
+
+

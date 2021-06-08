@@ -1,0 +1,47 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sReviews/_sReviews.pug
+
+block variables
+	- let  mainPage= 'mainPage' 
+	- let  bg= 'main.png'
+
+block title
+	- let  title= 'Сад Цветов'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+	+top-nav()
+	+headerBlock()
+		+e.txt
+			+e.imgWrap
+				+pic('header-img.png','','')
+			+b.section-title
+				//- h1 Сад Цветов
+				img.res-i(src="img/@2x/h1.png" alt="Сад Цветов")
+			+e.colorTxt Цветы на любой,<br>даже самый изысканный вкус!
+			.h4 Обворожительные и роскошные <br>Сочные и свежие<br>Скромные и сдержанные
+	+sCatalog()
+		+b.section-title.text-center
+			h2 Букеты
+			h5 Собраны с любовью виртуозными флористами
+		.row
+			+catalogItem('catalog-1.jpg')
+			+catalogItem('catalog-2.jpg')
+			+catalogItem('catalog-3.jpg')
+			+catalogItem('catalog-4.jpg')
+	+sReviews()
+	+sContact()
+		+e.headImg.text-center
+			+pic('buket.png')
+	+footer()
+
+
+

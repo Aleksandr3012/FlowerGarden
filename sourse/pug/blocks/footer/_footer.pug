@@ -1,0 +1,26 @@
+mixin footer()
+	+b.FOOTER.footer
+		.container 
+			+e.row.row 
+				.col-md-auto 
+					+e.logo(href="/")
+						img(src="img/@2x/logoWhite.png" alt="Логотип" loading="lazy")
+				.col 
+					+e.txtRow.row 
+						.col-auto 
+							+mnu
+						.col-auto 
+							p АДРЕС:<br>г.Севастополь<br>ул. Одесская 3 (Центр города)<br>Пн-Вс с 9:00 - 19:00
+						.col-sm
+							p ДОСТАВКА:<br>Прием заказов #[span.text-primary 24/7] без выходных Доставка по&nbsp;Севастополю с&nbsp;9:00&nbsp;до&nbsp;20:00
+				+e.col.col-lg-auto.align-self-start
+					+e.tel(href="tel:+7(978)8444151") 
+						+icon('tel')
+						span +7(978) 
+							strong 844 41-51
+					+b.messengers
+						+e.item(href="viber://chat?number=%2B79788444151" target='_blank')
+							+icon('viber')
+						+e.item(href="https://api.whatsapp.com/send?phone=79788444151&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C%2C%20%D1%8F%20%D0%BF%D0%BE%20%D0%BF%D0%BE%D0%B2%D0%BE%D0%B4%D1%83%20%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2" target='_blank')
+							+icon('whatsapp')
+			+e.polite(href="#") Политика конфиденциальности
