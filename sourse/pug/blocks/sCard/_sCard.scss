@@ -1,7 +1,9 @@
 // start .sCard
 .sCard {
 	--sPT: #{rem(20)};
-	// --sPB: ;
+	@include media-breakpoint-up(md) {
+		--sPB: #{rem(43)};
+	}
 	// --sTPB: ;
 
 	@include media-breakpoint-up(md) {
@@ -13,9 +15,12 @@
 	}
 
 	&__imgWrap {
-		height: 100%;
+		min-height: 100%;
 		picture {
 			height: 100%;
+			max-width: 345px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 		img {
 			width: 100%;
@@ -26,12 +31,22 @@
 
 	&__wrap {
 		border: 10px solid #eee0e7;
-		padding: rem(55) rem(71) rem(98);
 		display: flex;
 		flex-direction: column;
-		height: 100%;
+		padding: rem(15);
+		@include media-breakpoint-up(sm) {
+			padding: rem(30) rem(30);
+			min-height: 350px;
+		}
+		@include media-breakpoint-up(md) {
+			height: 100%;
+		}
 		@include media-breakpoint-up(lg) {
+			padding: rem(40) rem(61) rem(78);
 			min-height: 457px;
+		}
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(20);
 		}
 	}
 
@@ -49,11 +64,18 @@
 		}
 	}
 
+	.btn {
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+	}
+
 	.btn-info {
 		min-height: 50px;
 		@include media-breakpoint-up(lg) {
 			min-width: 188px;
 		}
+		margin-bottom: rem(10);
 	}
 
 	.btn-outline-info {
@@ -64,6 +86,7 @@
 
 	.btnRow {
 		margin-top: auto;
+		padding-top: rem(30);
 	}
 
 	@include media-breakpoint-up(sm) {

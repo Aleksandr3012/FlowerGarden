@@ -169,13 +169,12 @@ const JSCCommon = {
 	},
 
 	// /tabs
-	inputMask() {
-		// mask for input
-		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
-		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask("+9(999)999-99-99").mask(InputTel);
-	},
-
+	// inputMask() {
+	// 	// mask for input
+	// 	let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
+	// 	InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
+	// 	Inputmask("+9(999)999-99-99").mask(InputTel);
+	// },
 	// /inputMask
 	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
@@ -254,12 +253,6 @@ const JSCCommon = {
 			}, 1100);
 			return false;
 		});
-	},
-
-	getCurrentYear(el) {
-		let now = new Date();
-		let currentYear = document.querySelector(el);
-		if (currentYear) currentYear.innerText = now.getFullYear();
 	}
 
 };
@@ -269,8 +262,8 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
-	JSCCommon.mobileMenu();
-	JSCCommon.inputMask();
+	JSCCommon.mobileMenu(); // JSCCommon.inputMask();
+
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 

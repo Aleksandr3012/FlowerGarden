@@ -1,4 +1,4 @@
-mixin sDelivery(data)
+mixin sDelivery(btn)
 	// start sDelivery
 	+b.sDelivery.section#sDelivery&attributes(attributes)
 		.container
@@ -28,9 +28,10 @@ mixin sDelivery(data)
 					title: 'Доставка',
 					text: `Доставляем ваши заказы по г.&nbsp;Севастополю с&nbsp;9:00&nbsp;до&nbsp;20:00.`
 					})
-			+e.btnRow.row.justify-content-center 
-				.col-auto
-					a.btn.btn-outline-info(href="#") Перейти в каталог букетов
-				.col-auto
-					a.btn.btn-outline-info(href="#") Перейти в каталог растений
+			if btn
+				+e.btnRow.row.justify-content-center 
+					.col-auto
+						a.btn.btn-outline-info(href="#") Перейти в каталог букетов
+					.col-auto
+						a.btn.btn-outline-info(href="#") Перейти в каталог растений
 	// end sDelivery

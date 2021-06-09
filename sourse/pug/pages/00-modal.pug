@@ -22,11 +22,8 @@ block pagecontent
 	+b.pageHead 
 		.container
 			+breadcrumb('Главная','Комнатные растения','Бегония')
-	+sCard()
-	+sDelivery()
-	+sContact().pt-0
-		+b.section-title.text-center
-			h2 Как нас найти
+	.container 
+		a.btn.btn-info.link-modal-js(href="#modal-order") Ваш заказ
 	+footer()
 
 
