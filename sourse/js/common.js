@@ -262,12 +262,12 @@ function eventHandler() {
 	JSCCommon.animateScroll();
 
 	// JSCCommon.CustomInputFile(); 
-	var x = window.location.host;
-	let screenName;
-	screenName = document.body.dataset.bg;
-	if (screenName && x.includes("localhost:30")) {
-		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
-	}
+	// var x = window.location.host;
+	// let screenName;
+	// screenName = document.body.dataset.bg;
+	// if (screenName && x.includes("localhost:30")) {
+	// 	document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+	// }
 
 
 	function setFixedNav() {

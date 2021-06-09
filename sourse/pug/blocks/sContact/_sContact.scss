@@ -13,8 +13,8 @@
 	}
 
 	&__imgCol {
-		@include media-breakpoint-only(lg) {
-			width: 40%;
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(20);
 		}
 		picture {
 			height: 100%;
@@ -26,6 +26,9 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			@include media-breakpoint-only(lg) {
+				object-position: right;
+			}
 		}
 	}
 
